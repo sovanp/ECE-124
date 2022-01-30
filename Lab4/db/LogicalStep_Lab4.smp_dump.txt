@@ -1,0 +1,24 @@
+
+State Machine - |LogicalStep_Lab4_top|Grappler:inst_grappler|current_state
+Name current_state.button_press_2 current_state.grappler_on_state current_state.button_press_1 current_state.grappler_off 
+current_state.grappler_off 0 0 0 0 
+current_state.button_press_1 0 0 1 1 
+current_state.grappler_on_state 0 1 0 1 
+current_state.button_press_2 1 0 0 1 
+
+State Machine - |LogicalStep_Lab4_top|Extender:inst_extender|current_state
+Name current_state.retracting current_state.button_press_2 current_state.extended current_state.extending current_state.button_press_1 current_state.retracted 
+current_state.retracted 0 0 0 0 0 0 
+current_state.button_press_1 0 0 0 0 1 1 
+current_state.extending 0 0 0 1 0 1 
+current_state.extended 0 0 1 0 0 1 
+current_state.button_press_2 0 1 0 0 0 1 
+current_state.retracting 1 0 0 0 0 1 
+
+State Machine - |LogicalStep_Lab4_top|XY_Motion:inst_XY|current_state
+Name current_state.motion_attempted_error_state current_state.motion_button_released_moving current_state.motion_button_pressed current_state.still current_state.still_after_reset 
+current_state.still_after_reset 0 0 0 0 0 
+current_state.still 0 0 0 1 1 
+current_state.motion_button_pressed 0 0 1 0 1 
+current_state.motion_button_released_moving 0 1 0 0 1 
+current_state.motion_attempted_error_state 1 0 0 0 1 
