@@ -1,0 +1,58 @@
+|LogicalStep_Lab1_top
+leds[0] <= schem_gates:inst.AND_OUT
+leds[1] <= schem_gates:inst.NAND_OUT
+leds[2] <= schem_gates:inst.OR_OUT
+leds[3] <= schem_gates:inst.XOR_OUT
+leds[4] <= VHDL_gates:inst2.AND_OUT
+leds[5] <= VHDL_gates:inst2.NAND_OUT
+leds[6] <= VHDL_gates:inst2.OR_OUT
+leds[7] <= VHDL_gates:inst2.XOR_OUT
+PB[0] => VHDL_gates:inst2.AND_IN1
+PB[0] => VHDL_gates:inst2.NAND_IN1
+PB[0] => VHDL_gates:inst2.OR_IN1
+PB[0] => VHDL_gates:inst2.XOR_IN1
+PB[0] => schem_gates:inst.AND_IN1
+PB[0] => schem_gates:inst.NAND_IN1
+PB[0] => schem_gates:inst.OR_IN1
+PB[0] => schem_gates:inst.XOR_IN1
+PB[1] => VHDL_gates:inst2.AND_IN2
+PB[1] => VHDL_gates:inst2.NAND_IN2
+PB[1] => VHDL_gates:inst2.OR_IN2
+PB[1] => VHDL_gates:inst2.XOR_IN2
+PB[1] => schem_gates:inst.AND_IN2
+PB[1] => schem_gates:inst.NAND_IN2
+PB[1] => schem_gates:inst.OR_IN2
+PB[1] => schem_gates:inst.XOR_IN2
+sw[1] => ~NO_FANOUT~
+
+
+|LogicalStep_Lab1_top|VHDL_gates:inst2
+AND_IN1 => AND_OUT.IN0
+AND_IN2 => AND_OUT.IN1
+NAND_IN1 => NAND_OUT.IN0
+NAND_IN2 => NAND_OUT.IN1
+OR_IN1 => OR_OUT.IN0
+OR_IN2 => OR_OUT.IN1
+XOR_IN1 => XOR_OUT.IN0
+XOR_IN2 => XOR_OUT.IN1
+AND_OUT <= AND_OUT.DB_MAX_OUTPUT_PORT_TYPE
+NAND_OUT <= NAND_OUT.DB_MAX_OUTPUT_PORT_TYPE
+OR_OUT <= OR_OUT.DB_MAX_OUTPUT_PORT_TYPE
+XOR_OUT <= XOR_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab1_top|schem_gates:inst
+AND_OUT <= inst.DB_MAX_OUTPUT_PORT_TYPE
+AND_IN1 => inst.IN0
+AND_IN2 => inst.IN1
+NAND_OUT <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+NAND_IN2 => inst2.IN0
+NAND_IN1 => inst2.IN1
+OR_OUT <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+OR_IN2 => inst3.IN0
+OR_IN1 => inst3.IN1
+XOR_OUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+XOR_IN1 => inst4.IN0
+XOR_IN2 => inst4.IN1
+
+
