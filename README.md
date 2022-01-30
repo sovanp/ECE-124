@@ -1,5 +1,7 @@
 # ECE-124-Digital-Circuits-and-Systems
-ECE-124-Digital-Circuits-and-Systems
+University of Waterloo ECE 124 - Digital Circuits and Systems
+
+Design and implementation of Combinational and Sequential circuits. Number systems and boolean arithmetic, simplification of boolean functions, hardware description languages, timing analysis and implementation technologies.
 
 Projects are developed using Intel Quartus Prime Tools Suite for FPGA Design.
 
